@@ -1,0 +1,448 @@
+/* colores muak */
+:root {
+  --lpg-blue: #004b8d;
+  --lpg-red: #c00;
+  --lpg-gray-bg: #f8f8f8;
+  --lpg-border: #e1e1e1;
+  --lpg-text: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--lpg-gray-bg);
+  color: var(--lpg-text);
+  line-height: 1.6;
+}
+
+/* barrota de navegación */
+nav {
+  background-color: #fff;
+  border-bottom: 4px solid var(--lpg-blue);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--lpg-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: var(--lpg-blue);
+}
+
+/* encabezado */
+header {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--lpg-border);
+}
+
+header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto 10px;
+  color: #111;
+}
+
+header .lead {
+  color: #666;
+  font-size: 1.1rem;
+}
+.main-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 30px;
+  padding: 0 20px;
+}
+article {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid var(--lpg-border);
+}
+
+article p {
+  font-family: 'Georgia', serif; 
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget {
+  background: #fff;
+  padding: 15px;
+  border-top: 3px solid var(--lpg-blue);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.widget h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--lpg-blue);
+}
+
+
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .main-container { grid-template-columns: 1fr; }
+  .nav-container { flex-direction: column; }
+}
+/* logoo */
+
+.nav-logo {
+  display: flex;         
+  align-items: center;   
+  gap: 12px;             
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--lpg-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Controlar imagen */
+.nav-logo img {
+  height: 100px;          
+  width: auto;           
+}
+@media (max-width: 768px) {
+  .nav-container { 
+    flex-direction: column; 
+    gap: 15px;
+  }
+  
+  .nav-logo {
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;     
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+
+:root {
+  --lpg-blue: #004b8d;
+  --lpg-red: #c00;
+  --lpg-gray-bg: #f8f8f8;
+  --lpg-border: #e1e1e1;
+  --lpg-text: #222;
+}
+/* Estilo para los títulos con enlace en las noticias */
+.card-content h2 a, 
+.card-content h3 a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #111;           /* Color de texto oscuro de periódico */
+    transition: color 0.2s ease;
+}
+
+.card-content h2 a:hover, 
+.card-content h3 a:hover {
+    color: var(--lpg-blue); /* Cambia al azul de tu paleta al pasar el mouse */
+}
+
+/* Estilo para el texto descriptivo */
+.card-content p {
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* Ajuste para las etiquetas (tags) */
+.tag {
+    display: inline-block;
+    background-color: var(--lpg-red);
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+/* Estilo para las etiquetas (tags) más grandes y azules */
+.tag {
+    display: inline-block;
+    background-color: var(--lpg-blue); /* Cambiado a tu azul principal */
+    color: #ffffff;
+    padding: 5px 12px;           /* Más espacio interno */
+    font-size: 0.85rem;          /* Tamaño de letra más grande */
+    font-weight: 800;            /* Más grosor */
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    border-radius: 2px;          /* Un toque ligero en las esquinas */
+    letter-spacing: 0.5px;       /* Espaciado entre letras para mejor lectura */
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.widget {
+    background: #fff;
+    padding: 20px;
+    border-top: 4px solid var(--lpg-blue); /* Borde grueso arriba tipo noticia */
+    border-left: 1px solid var(--lpg-border);
+    border-right: 1px solid var(--lpg-border);
+    border-bottom: 1px solid var(--lpg-border);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.widget h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--lpg-blue);
+    border-bottom: 1px solid var(--lpg-border);
+    padding-bottom: 5px;
+}
+
+/* Estilo para la cita de Pascal */
+.widget p a {
+    text-decoration: none;
+    color: var(--lpg-text);
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    transition: color 0.3s;
+}
+
+.widget p a:hover {
+    color: var(--lpg-red); /* Un toque de color al pasar el mouse */
+}
+.main-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    
+    /* ACTIVAR EL GRID */
+    display: grid;
+    /* Definimos dos columnas: una de 70% y otra de 30% */
+    grid-template-columns: 7fr 3fr; 
+    gap: 30px;
+    align-items: start; /* Importante para que la sidebar no se baje */
+}
+
+/* Forzamos a la sidebar a quedarse en la segunda columna */
+.sidebar {
+    grid-column: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Forzamos a las noticias a quedarse en la primera columna */
+.grid-noticias {
+    grid-column: 1;
+}
+
+/* RESPONSIVO: En celular sí queremos que la sidebar se baje */
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+    
+    .sidebar, .grid-noticias {
+        grid-column: 1; /* Todos a la misma columna */
+    }
+}
+/* Estilo para los enlaces dentro de los widgets de la sidebar */
+.widget h3 a {
+    text-decoration: none;    /* Quita el subrayado */
+    color: var(--lpg-blue);   /* Usa tu azul de la paleta */
+    display: block;           /* Hace que todo el ancho del título sea clickeable */
+    transition: 0.3s;
+}
+
+.widget h3 a:hover {
+    color: var(--lpg-red);    /* Cambia a rojo al pasar el mouse para dar feedback */
+}
+
+/* Estilo para el texto descriptivo de los widgets */
+.widget p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+/* Estilo de la primera letra (Capitular) */
+.dropcap::first-letter {
+    color: var(--lpg-blue);
+    float: left;
+    font-size: 55px;
+    line-height: 40px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: 'Georgia', serif;
+}
+
+/* Cuerpo del artículo */
+.article-body p {
+    font-family: 'Georgia', serif; /* Fuente típica de periódico */
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Cita destacada en medio del texto */
+.pull-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--lpg-blue);
+    border-left: 5px solid var(--lpg-red);
+    padding: 20px;
+    margin: 30px 0;
+    background: #f9f9f9;
+}
+
+/* Caja de conclusión */
+.conclusion-box {
+    background: #eee;
+    padding: 25px;
+    border-top: 3px solid #111;
+    margin-top: 40px;
+}
+
+/* Listas ordenadas y desordenadas */
+.method-list, .posture-list {
+    margin-bottom: 30px;
+    padding-left: 40px;
+}
+
+.method-list li, .posture-list li {
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+        .image-section {
+            text-align: center;
+            margin: 2rem auto 3rem;
+            width: 100%;
+        }
+        
+        .image-section img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .image-section figcaption {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #555;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        /* Estilo general del Sidebar */
+.sidebar-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* Recuadros de Bibliografía */
+.bibliography-card {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.bibliography-card h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+
+.bibliography-card h3 a {
+ 
+    color: #004b8d; /* Rojo editorial */
+    text-decoration: none;
+}
+
+.bibliography-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.bibliography-card p {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.3;
+    margin: 0;
+}
